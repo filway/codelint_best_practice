@@ -1,23 +1,15 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:vue/essential"
-    ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "vue"
-    ],
-    "rules": {
-        "quotes": 2,
-        "semi": 1,
-        "no-console": 1,
-        "space-before-function-paren": 0
-    }
+	env: {
+		browser: true,
+		es2021: true,
+	},
+	extends: ['airbnb-base', 'prettier'],
+	parserOptions: {
+		ecmaVersion: 12,
+		sourceType: 'module',
+	},
+	plugins: ['prettier'],
+	rules: {
+		'prettier/prettier': ['error'],
+	},
 }

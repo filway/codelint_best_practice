@@ -1,7 +1,7 @@
 function test() {
-console.log("test code lint")   
-    }
+	console.log('test code lint')
+}
 
-var a = 1;
-        let str = 'ss';
-    console.log("111");
+const a = 1
+const str = 'ss'
+console.log('111')
