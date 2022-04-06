@@ -13,12 +13,32 @@
   "author": "filway",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/config-conventional": "^16.2.1",
+    "commitizen": "^4.2.4",
+    "commitlint": "^16.2.3",
+    "commitlint-config-cz": "^0.13.3",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.3.0",
     "eslint": "^7.19.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
     "prettier": "2.5.1",
     "prettier-eslint": "^13.0.0"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint \"src/**/*.{js,ts,vue}\"",
+    "commit": "git-cz",
+    "genlog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }
